@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Matthew Fajardo</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <script src="./modal.js"></script>
+    </head>
+    <body>
+      <!-- Begin Header Section -->
+      <div class='page-section header'>
+        <div class='header-col'>
+          <div class='info-container'>
+            <div class='info-head'>
+              <h1>Hello!</h1>
+            </div>
+            <div class='info-body'>
+              <h2>I'm <span class='emphasized'>Matthew Fajardo</span>,</h2>
+              <p>A <span class='emphasized'>Full-Stack Engineer</span> based in <span class='emphasized'>Los Angeles, CA</span>,<br>
+                that strives to create <span class='emphasized'>simple</span> and <span class='emphasized'>intuitive</span>
+                user experiences.
+              </p>
+            </div>
+          </div>
+          <div class='navbar'>
+            <a>About</a>
+            <a>Projects</a>
+            <a>Contact</a>
+          </div>
+        </div>
+      </div>
+      <!-- End Header Section -->
+      <!-- Begin About Section -->
+      <div class='page-section about'>
+        <div class='title-row'>
+          <div class='title-container'>
+            <h1>About Me</h1>
+          </div>
+        </div>
+        <div class='about-row'>
+          <!-- Begin Personal Column -->
+          <div class='about-col'>
+            <div class='circle'>
+              <img class='linkedIn-pic' src='./assets/linkedIn.jpg'>
+            </div>
+            <div class='about-profile'>
+              <p>Cal Poly, San Luis Obispo Alum</p>
+              <p>Reader of Marvel comics.</p>
+              <p>Explorer of local restaurants.</p>
+              <p>Fan of the Los Angeles Lakers and Chargers.</p>
+            </div>
+          </div>
+          <!-- End Personal Column -->
+          <!-- Begin Skills Column -->
+          <div class='about-col-skills'>
+            <div class='skills-container'>
+              <h1>Skills</h1>
+              <div class='section-row'>
+                <!-- Begin Language Section -->
+                <div class='lang-section skill-section'>
+                  <h2>Languages</h2>
+                  <div class='skill-list'>
+                    <ul>
+                      <li>JavaScript</li>
+                      <li>HTML</li>
+                      <li>CSS, SCSS, Less</li>
+                      <li>TypeScript</li>
+                    </ul>
+                    <ul>
+                      <li>Java</li>
+                      <li>Python</li>
+                      <li>SQL</li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Language Section -->
+                <!-- Begin Technologies Section -->
+                <div class='tech-section skill-section'>
+                  <h2>Technologies</h2>
+                  <div class='skill-list'>
+                    <ul>
+                      <li>React</li>
+                      <li>Redux</li>
+                      <li>Angular</li>
+                      <li>jQuery</li>
+                    </ul>
+                    <ul>
+                      <li>Node.js</li>
+                      <li>Express</li>
+                      <li>MySQL</li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Technologies Section -->
+                <!-- Begin Software Section -->
+                <div class='software-section skill-section'>
+                  <h2>Software</h2>
+                  <div class='skill-list'>
+                    <ul>
+                      <li>Git</li>
+                      <li>Webpack</li>
+                      <li>Postman</li>
+                      <li>Jest</li>
+                    </ul>
+                    <ul>
+                      <li>Jira</li>
+                      <li>Jenkins</li>
+                      <li>Figma</li>
+                      <li>InVision</li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Software Section -->
+              </div>
+            </div>
+          </div>
+          <!-- End Skills Column -->
+        </div>
+      </div>
+      <!-- End About Section -->
+      <!-- Begin Projects Section -->
+      <div class='page-section projects'>
+        <div class='title-row'>
+          <div class='title-container'>
+            <h1>Projects</h1>
+          </div>
+        </div>
+        <!-- Begin Projects Card Container -->
+        <div class='projects-container'>
+          <div class='projects-row'>
+            <div class='project-card' data-project='parched'>
+              <h3>Parched.</h3>
+              <p>A web app that provides users with food-beer pairings using PunkAPI.</p>
+              <button>Learn More</button>
+            </div>
+            <div class='project-card' data-project='poker'>
+              <h3>React Video Poker</h3>
+              <p>A web app to emulate video poker.</p>
+              <button>Learn More</button>
+            </div>
+            <div class='project-card' data-project='homebase'>
+              <h3>Homebase</h3>
+              <p>A web app to facilitate Dungeons & Dragons gameplay, allowing users to
+                create, store, and maintain character stats and campaign notes.</p>
+              <button>Learn More</button>
+            </div>
+            <div class='project-card' data-project='pcw'>
+              <h3>Polycultural Weekend App</h3>
+              <p>A mobile app created for an event at Cal Poly, San Luis Obispo that allowed event administrators to check-in attendees and visualize check-in data.</p>
+              <button>Learn More</button>
+            </div>
+          </div>
+        </div>
+        <!-- End Projects Card Container -->
+      </div>
+      <!-- End Projects Section -->
+      <!-- Begin Contact Section -->
+      <div class='page-section contact'>
+        <div class='contact-row'>
+          <div class='contact-col'>
+            <!-- Begin Contact Container -->
+            <div class='contact-content-frame'>
+              <div class='contact-title-container'>
+                <h1>Contact</h1>
+              </div>
+              <div class='contact-info-container'>
+                <p class='thank-you-text'>Thank you for visiting!</p>
+                <p>I would love to connect with you on LinkedIn.</p>
+                <a href='https://linkedin.com/in/matthewfajardo'><i data-feather='linkedin'></i></a>
+              </div>
+            </div>
+            <!-- End Contact Container -->
+          </div>
+      </div>
+      <!-- End Contact Section -->
+
+      <!-- Modal container -->
+      <div id='modal-container'>
+      </div>
+
+      <!-- Handlebars modal template -->
+      <script id="modal-template" type="text/x-handlebars-template">
+        <div class="modal">
+          <h1>{{title}}</h1>
+          <div class="body">
+            {{body}}
+          </div>
+        </div>
+      </script>
+    </body>
+</html>
