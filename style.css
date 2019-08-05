@@ -319,7 +319,7 @@ body h1, body h2, body h3, body p, body a, body li {
 }
 
 .contact-row {
-  height: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -394,7 +394,6 @@ body h1, body h2, body h3, body p, body a, body li {
   justify-content: center;
 }
 #modal-container .modal-content {
-  width: 75%;
   min-width: 300px;
   margin: auto;
   text-align: center;
@@ -405,13 +404,8 @@ body h1, body h2, body h3, body p, body a, body li {
   background-color: #dddddd;
 }
 #modal-container .image-carousel {
-  max-width: 90%;
+  max-width: 80%;
   margin: auto;
-}
-@media screen and (max-width: 600px) {
-  #modal-container .image-carousel {
-    max-width: 80%;
-  }
 }
 #modal-container .image-carousel img {
   max-width: 100%;
@@ -424,12 +418,17 @@ body h1, body h2, body h3, body p, body a, body li {
   color: white;
   background-color: #71eeb8;
 }
+@media screen and (max-width: 500px) {
+  #modal-container .modal-title {
+    font-size: 24px;
+  }
+}
 #modal-container .tag-row {
   margin: 10px 0;
 }
 #modal-container .tech-tag {
   display: inline-block;
-  margin: 5px 5px;
+  margin: 10px 5px;
   padding: 5px 10px;
   background-color: #71eeb8;
   color: white;

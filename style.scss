@@ -338,7 +338,7 @@ body {
   background-color: $seafoam-green;
 }
 .contact-row {
-  height: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -413,7 +413,6 @@ body {
     justify-content: center;
   }
   .modal-content {
-    width: 75%;
     min-width: 300px;
     margin: auto;
     text-align: center;
@@ -424,12 +423,8 @@ body {
     background-color: #dddddd;
   }
   .image-carousel {
-    max-width: 90%;
+    max-width: 80%;
     margin: auto;
-
-    @media screen and (max-width: 600px) {
-      max-width: 80%;
-    }
 
     img {
       max-width: 100%;
@@ -442,13 +437,17 @@ body {
     padding: 10px 0;
     color: white;
     background-color: $seafoam-green;
+
+    @media screen and (max-width: 500px) {
+      font-size: 24px;
+    }
   }
   .tag-row {
     margin: 10px 0;
   }
   .tech-tag {
     display: inline-block;
-    margin: 5px 5px;
+    margin: 10px 5px;
     padding: 5px 10px;
     background-color: $seafoam-green;
     color: white;

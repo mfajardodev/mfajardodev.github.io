@@ -28,7 +28,7 @@ $(function() {
     },
     parched: {
       title: 'Parched.',
-      screenshots: [{src: './assets/parched_1.png'}],
+      screenshots: [{src: './assets/parched_1.png'}, {src: './assets/parched_2.png'}],
       tech: [{tag: 'TypeScript'}, {tag: 'React'}, {tag: 'SCSS'}, {tag: 'Webpack'}],
       hasDemo: true,
       demoLink: 'https://mfajardodev.github.io/Grab-A-Cold-One/'
@@ -52,13 +52,24 @@ $(function() {
       demoLink: projectsObj[projectKey].demoLink,
     };
     let modalHtml = modalTemplate(modalContext);
-
-    console.log(projectKey, projectsObj[projectKey].screenshots, projectsObj[projectKey].tech);
     
     $('#modal-container').empty().append(modalHtml);
     
-    $('.image-carousel').slick();
-    
+    if (projectKey === 'pcw') {
+      $('#modal-container .modal-content').css('max-width', '25%');
+      $('#modal-container .modal-content').css('max-width', '25%');
+    }
+    else {
+      $('#modal-container .modal-content').css('max-width', '80%');
+    }
+
+    $('.image-carousel').slick({
+      speed: 300,
+      dots: true
+    });
+
+    $('.image-carousel').slick('slickGoTo', 0);
+
     openModal();
   });
 
