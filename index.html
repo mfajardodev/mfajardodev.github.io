@@ -2,17 +2,16 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Full-Stack Engineer">
         <title>Matthew Fajardo</title>
         <link rel="stylesheet" href="style.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
-        <script src="https://unpkg.com/feather-icons"></script>
-        <script src="./modal.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
     </head>
     <body>
       <!-- Begin Header Section -->
-      <div class='page-section header'>
+      <div id='header' class='page-section'>
         <div class='header-col'>
           <div class='info-container'>
             <div class='info-head'>
@@ -27,15 +26,15 @@
             </div>
           </div>
           <div class='navbar'>
-            <a>About</a>
-            <a>Projects</a>
-            <a>Contact</a>
+            <a class='nav-link' data-scrollTo='about'>About</a>
+            <a class='nav-link' data-scrollTo='projects'>Projects</a>
+            <a class='nav-link' data-scrollTo='contact'>Contact</a>
           </div>
         </div>
       </div>
       <!-- End Header Section -->
       <!-- Begin About Section -->
-      <div class='page-section about'>
+      <div id='about' class='page-section'>
         <div class='title-row'>
           <div class='title-container'>
             <h1>About Me</h1>
@@ -44,6 +43,9 @@
         <div class='about-row'>
           <!-- Begin Personal Column -->
           <div class='about-col'>
+            <div class='name-row'>
+              <h1>Matthew Fajardo</h1>
+            </div>
             <div class='circle'>
               <img class='linkedIn-pic' src='./assets/linkedIn.jpg'>
             </div>
@@ -123,7 +125,7 @@
       </div>
       <!-- End About Section -->
       <!-- Begin Projects Section -->
-      <div class='page-section projects'>
+      <div id='projects' class='page-section'>
         <div class='title-row'>
           <div class='title-container'>
             <h1>Projects</h1>
@@ -159,7 +161,7 @@
       </div>
       <!-- End Projects Section -->
       <!-- Begin Contact Section -->
-      <div class='page-section contact'>
+      <div id='contact' class='page-section'>
         <div class='contact-row'>
           <div class='contact-col'>
             <!-- Begin Contact Container -->
@@ -175,6 +177,7 @@
             </div>
             <!-- End Contact Container -->
           </div>
+        </div>
       </div>
       <!-- End Contact Section -->
 
@@ -184,12 +187,40 @@
 
       <!-- Handlebars modal template -->
       <script id="modal-template" type="text/x-handlebars-template">
-        <div class="modal">
-          <h1>{{title}}</h1>
-          <div class="body">
-            {{body}}
+        <div class='modal-overlay'>
+          <div class='modal-wrapper'>
+            <div class="modal-content">
+              <h1 class='modal-title'>{{title}}</h1>
+              <div class="body">
+                <div class='carousel-row'>
+                  <div class='image-carousel'>
+                    {{#each screenshots}}
+                      <div><img src={{src}} alt='project screenshot'></div>
+                    {{/each}}
+                  </div>
+                </div>
+                {{#if hasDemo}}
+                <div class='demo-row'>
+                  <a href={{demoLink}} target="_blank">
+                    <button>Click here for a demo!</button>
+                  </a>
+                </div>
+                {{/if}}
+                <div class='tag-row'>
+                  {{#each tech}}
+                  <p class='tech-tag'>{{tag}}</p>
+                  {{/each}}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+      <script src="https://unpkg.com/feather-icons"></script>
+      <script src="./modal.js"></script>
     </body>
 </html>
