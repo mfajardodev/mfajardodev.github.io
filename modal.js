@@ -35,14 +35,26 @@ $(function() {
     }
   }
 
-  let openModal = () => {
+  let openModal = function() {
     $('#modal-container').show();
+    bindModalEvents();
   }
-  let closeModal = () => {
+  let closeModal = function() {
     $('#modal-container').hide();
   }
 
-  $('.project-card button').on('click', (e) => {
+  let bindModalEvents = function() {
+    $('.modal-overlay').on('click tap', function(e) {
+      if ($(e.target).hasClass('modal-overlay') || $(e.target).hasClass('modal-wrapper')) {
+        closeModal();
+      }
+    });
+    $('.close-modal').on('click', function(e) {
+      closeModal();
+    });
+  }
+
+  $('.project-card button').on('click', function(e) {
     let projectKey = $(e.target).parents('.project-card').attr('data-project');
     let modalContext = {
       title: projectsObj[projectKey].title,
@@ -60,12 +72,11 @@ $(function() {
       $('#modal-container .modal-content').css('max-width', '25%');
     }
     else {
-      $('#modal-container .modal-content').css('max-width', '80%');
+      $('#modal-container .modal-content').css('max-width', '60%');
     }
 
     $('.image-carousel').slick({
-      speed: 300,
-      dots: true
+      speed: 300
     });
 
     $('.image-carousel').slick('slickGoTo', 0);
@@ -73,9 +84,8 @@ $(function() {
     openModal();
   });
 
-  $('.nav-link').on('click', (e) => {
+  $('.nav-link').on('click', function(e) {
     let section = $(e.target).attr('data-scrollTo');
-    console.log(section);
     if (section === 'contact') {
       $('html, body').animate({
         scrollTop: $("#"+section).offset().top
@@ -84,18 +94,11 @@ $(function() {
     else {
       let marginOffset = $(window).height() / 10;
       let topOffset = $("#"+section).offset().top - marginOffset + 10;
-      console.log(topOffset);
       $('html, body').animate({
         scrollTop: topOffset
       }, 200);
     }
   })
-
-  $('body').on('click', (e) => {
-    if ($(e.target).hasClass('modal-overlay') || $(e.target).hasClass('modal-wrapper')) {
-      closeModal();
-    }
-  });
 
   feather.replace();
 });

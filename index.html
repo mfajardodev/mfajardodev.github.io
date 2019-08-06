@@ -187,10 +187,13 @@
 
       <!-- Handlebars modal template -->
       <script id="modal-template" type="text/x-handlebars-template">
-        <div class='modal-overlay'>
+        <div class='modal-overlay' onclick="return false;">
           <div class='modal-wrapper'>
             <div class="modal-content">
-              <h1 class='modal-title'>{{title}}</h1>
+              <div class='modal-title-row'>
+                <a class='close-modal'>[x]</a>
+                <h1 class='modal-title'>{{title}}</h1>
+              </div>
               <div class="body">
                 <div class='carousel-row'>
                   <div class='image-carousel'>
@@ -219,6 +222,7 @@
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-touch-events/2.0.0/jquery.mobile-events.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
       <script src="https://unpkg.com/feather-icons"></script>
