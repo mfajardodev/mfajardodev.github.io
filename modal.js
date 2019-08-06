@@ -16,8 +16,8 @@ $(function() {
       title: 'React Video Poker',
       screenshots: [{src: './assets/poker_1.png'}, {src: './assets/poker_2.png'}, {src: './assets/poker_3.png'}],
       tech: [{tag: 'React'}, {tag: 'Redux'}, {tag: 'SCSS'}, {tag: 'Webpack'}, {tag: 'Jest'}],
-      hasDemo: false,
-      demoLink: ''
+      hasDemo: true,
+      demoLink: 'https://mfajardodev.github.io/React-Video-Poker/'
     },
     pcw: {
       title: 'PolyCultural Weekend App',

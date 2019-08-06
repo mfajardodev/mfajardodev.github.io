@@ -473,8 +473,14 @@ body {
   .demo-row {
     padding: 10px 0;
     background-color: $theme-color;
-
-    button {
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+        text-decoration-color: $theme-color;
+      }
+    }
+    span {
       padding: 5px 10px;
       background-color: white;
       border: none;
