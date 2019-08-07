@@ -232,28 +232,37 @@ body h1, body h2, body h3, body p, body a, body li {
 .about-row .about-col-skills .skill-section .skill-list {
   color: white;
 }
-@media screen and (max-width: 1000px) {
-  .about-row .about-col-skills .skill-section .skill-list {
-    display: flex;
-    justify-content: space-evenly;
-  }
-}
 .about-row .about-col-skills .skill-section .skill-list ul {
   display: inline-block;
-  width: 90%;
-  margin: 0 5%;
+  width: auto;
+  margin: 0;
   padding-inline-start: 20px;
   text-align: left;
 }
 @media screen and (max-width: 1000px) {
   .about-row .about-col-skills .skill-section .skill-list ul {
-    width: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
     margin: 0;
     padding-inline-start: 0;
   }
 }
 .about-row .about-col-skills .skill-section .skill-list li {
   font-size: 13px;
+}
+@media screen and (max-width: 1000px) {
+  .about-row .about-col-skills .skill-section .skill-list li {
+    display: inline-block;
+  }
+  .about-row .about-col-skills .skill-section .skill-list li:nth-child(even) {
+    text-align: left;
+    padding-left: 5px;
+  }
+  .about-row .about-col-skills .skill-section .skill-list li:nth-child(odd) {
+    text-align: right;
+    padding-right: 5px;
+    border-right: 1px solid white;
+  }
 }
 @media screen and (max-width: 500px) {
   .about-row .about-col-skills .skill-section .skill-list li {
