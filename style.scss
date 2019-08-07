@@ -10,18 +10,17 @@ body {
   }
 }
 
-#header, #contact {
-  height: 100vh;
-  margin: 0;
-}
-#about, #projects {
-  margin: 10vh 0;
+.page-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 // Header
 #header {
-  display: flex;
-  justify-content: center;
+  flex-direction: row;
   background: $theme-color;
 
   h1, h2, h3, p, a {
@@ -132,8 +131,8 @@ body {
 .about-row {
   position: relative;
   height: auto;
+  width: 90%;
   max-width: 1100px;
-  margin: auto;
   display: flex;
   justify-content: space-around;
 
@@ -161,6 +160,9 @@ body {
 
     .name-row {
       text-align: center;
+      max-width: 90%;
+      margin: 0 auto;
+
       h1 {
         display: inline-block;
         margin: 10px 0 0 0;
@@ -414,7 +416,7 @@ body {
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(1.0, 1.0, 1.0, 0.25);
+    background-color: rgba(1.0, 1.0, 1.0, 0.75);
   }
   .modal-wrapper {
     display: flex;

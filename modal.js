@@ -92,8 +92,7 @@ $(function() {
       }, 200);
     }
     else {
-      let marginOffset = $(window).height() / 10;
-      let topOffset = $("#"+section).offset().top - marginOffset + 10;
+      let topOffset = $("#"+section).offset().top;
       $('html, body').animate({
         scrollTop: topOffset
       }, 200);
