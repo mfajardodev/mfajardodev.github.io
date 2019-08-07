@@ -245,6 +245,12 @@ body h1, body h2, body h3, body p, body a, body li {
   padding-inline-start: 20px;
   text-align: left;
 }
+@media screen and (max-width: 1000px) {
+  .about-row .about-col-skills .skill-section .skill-list ul {
+    width: auto;
+    padding-inline-start: 5px;
+  }
+}
 .about-row .about-col-skills .skill-section .skill-list li {
   font-size: 13px;
 }
