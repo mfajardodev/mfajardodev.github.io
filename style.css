@@ -237,6 +237,7 @@ body h1, body h2, body h3, body p, body a, body li {
   width: auto;
   margin: 0;
   padding-inline-start: 20px;
+  padding-left: 20px;
   text-align: left;
 }
 @media screen and (max-width: 1000px) {
@@ -245,6 +246,7 @@ body h1, body h2, body h3, body p, body a, body li {
     grid-template-columns: 50% 50%;
     margin: 0;
     padding-inline-start: 0;
+    padding: 0px;
   }
 }
 .about-row .about-col-skills .skill-section .skill-list li {
