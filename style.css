@@ -235,7 +235,7 @@ body h1, body h2, body h3, body p, body a, body li {
 @media screen and (max-width: 1000px) {
   .about-row .about-col-skills .skill-section .skill-list {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 }
 .about-row .about-col-skills .skill-section .skill-list ul {
@@ -248,11 +248,17 @@ body h1, body h2, body h3, body p, body a, body li {
 @media screen and (max-width: 1000px) {
   .about-row .about-col-skills .skill-section .skill-list ul {
     width: auto;
-    padding-inline-start: 5px;
+    margin: 0;
+    padding-inline-start: 0;
   }
 }
 .about-row .about-col-skills .skill-section .skill-list li {
   font-size: 13px;
+}
+@media screen and (max-width: 500px) {
+  .about-row .about-col-skills .skill-section .skill-list li {
+    font-size: 12px;
+  }
 }
 .about-row .about-col-skills .skills-container {
   width: 90%;
