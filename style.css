@@ -1,7 +1,11 @@
-body {
+html {
+  height: 100%;
+}
+html body {
+  height: 100%;
   margin: 0;
 }
-body h1, body h2, body h3, body p, body a, body li {
+html body h1, html body h2, html body h3, html body p, html body a, html body li {
   font-family: Helvetica;
   font-weight: 200;
 }
@@ -12,6 +16,9 @@ body h1, body h2, body h3, body p, body a, body li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.page-section#header, .page-section#contact {
+  height: 100%;
 }
 
 #header {
@@ -242,6 +249,9 @@ body h1, body h2, body h3, body p, body a, body li {
 }
 @media screen and (max-width: 1000px) {
   .about-row .about-col-skills .skill-section .skill-list ul {
+    display: -ms-grid;
+    -ms-grid-columns: 50% 50%;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
     display: grid;
     grid-template-columns: 50% 50%;
     margin: 0;
@@ -265,6 +275,24 @@ body h1, body h2, body h3, body p, body a, body li {
     padding-right: 5px;
     border-right: 1px solid white;
   }
+  .about-row .about-col-skills .skill-section .skill-list li:nth-child(1), .about-row .about-col-skills .skill-section .skill-list li:nth-child(3), .about-row .about-col-skills .skill-section .skill-list li:nth-child(5), .about-row .about-col-skills .skill-section .skill-list li:nth-child(7) {
+    -ms-grid-column: 1;
+  }
+  .about-row .about-col-skills .skill-section .skill-list li:nth-child(2), .about-row .about-col-skills .skill-section .skill-list li:nth-child(4), .about-row .about-col-skills .skill-section .skill-list li:nth-child(6), .about-row .about-col-skills .skill-section .skill-list li:nth-child(8) {
+    -ms-grid-column: 2;
+  }
+  .about-row .about-col-skills .skill-section .skill-list li:nth-child(1), .about-row .about-col-skills .skill-section .skill-list li:nth-child(2) {
+    -ms-grid-row: 1;
+  }
+  .about-row .about-col-skills .skill-section .skill-list li:nth-child(3), .about-row .about-col-skills .skill-section .skill-list li:nth-child(4) {
+    -ms-grid-row: 2;
+  }
+  .about-row .about-col-skills .skill-section .skill-list li:nth-child(5), .about-row .about-col-skills .skill-section .skill-list li:nth-child(6) {
+    -ms-grid-row: 3;
+  }
+  .about-row .about-col-skills .skill-section .skill-list li:nth-child(7), .about-row .about-col-skills .skill-section .skill-list li:nth-child(8) {
+    -ms-grid-row: 4;
+  }
 }
 @media screen and (max-width: 500px) {
   .about-row .about-col-skills .skill-section .skill-list li {
@@ -280,6 +308,10 @@ body h1, body h2, body h3, body p, body a, body li {
   padding: 5px 10px;
   box-shadow: 4px 4px #008080;
   border: 1px solid #008080;
+}
+
+.projects-container {
+  width: 100%;
 }
 
 .projects-row {
@@ -426,7 +458,6 @@ body h1, body h2, body h3, body p, body a, body li {
 }
 #modal-container .modal-content {
   min-width: 300px;
-  margin: auto;
   text-align: center;
   background-color: white;
 }
