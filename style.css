@@ -65,6 +65,7 @@ html body h1, html body h2, html body h3, html body p, html body a, html body li
   color: #008080;
 }
 #header .header-col .info-body {
+  max-width: 475px;
   padding: 25px;
   background-color: #008080;
   border: 2px solid white;
@@ -75,8 +76,18 @@ html body h1, html body h2, html body h3, html body p, html body a, html body li
 #header .header-col .info-body h2 {
   margin: 10px 0;
 }
+@media screen and (max-width: 500px) {
+  #header .header-col .info-body h2 {
+    font-size: 20px;
+  }
+}
 #header .header-col .info-body p {
   line-height: 1.75em;
+}
+@media screen and (max-width: 500px) {
+  #header .header-col .info-body p {
+    font-size: 13px;
+  }
 }
 #header .header-col .info-body .emphasized {
   background-color: white;
@@ -186,6 +197,7 @@ html body h1, html body h2, html body h3, html body p, html body a, html body li
 }
 .about-row .about-col .about-profile {
   margin: 0 10px;
+  padding: 5px 0;
   text-align: center;
   background-color: #008080;
   box-shadow: 4px 4px rgba(1, 1, 1, 0.25);
