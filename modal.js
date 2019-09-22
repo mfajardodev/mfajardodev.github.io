@@ -31,7 +31,7 @@ $(function() {
       screenshots: [{src: './assets/parched_1.png'}, {src: './assets/parched_2.png'}],
       tech: [{tag: 'TypeScript'}, {tag: 'React'}, {tag: 'SCSS'}, {tag: 'Webpack'}],
       hasDemo: true,
-      demoLink: 'https://mfajardodev.github.io/Grab-A-Cold-One/'
+      demoLink: 'https://mfajardodev.github.io/Parched/'
     }
   }
 
