@@ -44,7 +44,7 @@ $(function() {
   }
 
   let bindModalEvents = function() {
-    $('.modal-overlay').on('click tap', function(e) {
+    $('.modal-overlay').on('click', function(e) {
       if ($(e.target).hasClass('modal-overlay') || $(e.target).hasClass('modal-wrapper')) {
         closeModal();
       }
